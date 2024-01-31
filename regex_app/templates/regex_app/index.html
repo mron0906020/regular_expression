@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>正規表現練習</title>
 </head>
+
 <body>
     <h1>登録してね</h1>
     <form action="{% url 'regex_app:confirm' %}" method="POST">
@@ -15,7 +17,7 @@
             </label>
         </p>
         <p style="color: red;">
-            {% if age ==  "" %}
+            {% if age == "" %}
             Ageは1~3桁の半角数字のみ入力してください。
             {% endif %}
         </p>
@@ -25,7 +27,7 @@
             </label>
         </p>
         <p style="color: red;">
-            {% if zip_code ==  "" %}
+            {% if zip_code == "" %}
             Zip codeは全7桁の半角数字のみ入力してください。(ハイフンはあってもなくてもOK)
             {% endif %}
         </p>
@@ -35,7 +37,7 @@
             </label>
         </p>
         <p style="color: red;">
-            {% if tel ==  "" %}
+            {% if tel == "" %}
             Cell phoneは全9桁の半角数字のみ入力してください。(ハイフンはあってもなくてもOK)
             {% endif %}
         </p>
@@ -46,6 +48,7 @@
         </p>
         <button type="submit">登録</button>
     </form>
-    
+
 </body>
+
 </html>
